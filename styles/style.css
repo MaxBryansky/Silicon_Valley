@@ -1,0 +1,382 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+	padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+	min-height: 100vh;
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+	list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+	max-width: 100%;
+	display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article>*+* {
+	margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/*-------------------------------------------------------*/
+body {
+	font-family: 'Roboto', sans-serif;
+	height: 100%;
+	max-width: 1329px;
+	padding-left: 55px;
+	padding-right: 55px;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	max-width: 1110px;
+	margin: 0 auto;
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+.title {
+	color: #007765;
+	font-weight: 500;
+	font-size: 64px;
+	line-height: 75px;
+	text-align: center;
+}
+
+/*------------------------------------*/
+.header {
+	background-color: #007765;
+
+}
+
+.header__top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.header__list {
+	display: flex;
+}
+
+.header__list li {
+	color: #fff;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 28px;
+	padding-left: 8px;
+}
+
+.header__list a {
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 28px;
+	color: #fff;
+	text-decoration: none;
+	padding-left: 8px;
+	transition: 0.5s ease-in;
+	;
+	transition-delay: 0.5s;
+	cursor: pointer;
+}
+
+.header__list a:hover {
+	color: #F4CB35;
+}
+
+.header__list a:last-child {
+	padding-left: 0;
+}
+
+/*------------------------------------*/
+.pipernet {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: url(../images/fon1.png) center center / cover no-repeat;
+}
+
+.pipernet__case {
+	max-width: 1219px;
+}
+
+.piper {
+	padding: 160px 0;
+}
+
+.piper span {
+	font-weight: 500;
+	font-size: 72px;
+	line-height: 84px;
+	color: #fff
+}
+
+/*------------------------------------*/
+.article {
+	background-color: #EEEEEE;
+}
+
+.article__problem-title {
+	padding: 48px 0 16px 0;
+}
+
+.article__problem-text {
+	padding: 0 0 92px 0;
+}
+
+.article__problem-text p {
+	color: #000000;
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 38px;
+	margin-bottom: 30px;
+}
+
+.article__problem-text p:last-child {
+	margin-bottom: 0;
+}
+
+.article__problem-text span {
+	font-weight: 700;
+}
+
+/*------------------------------------*/
+.together {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: url(../images/fon2.png) center center / cover no-repeat;
+}
+
+.together__case {
+	max-width: 1219px;
+}
+
+.this_together {
+	max-width: 893px;
+	padding: 128px 0 127px 0;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.this_together span {
+	text-indent: 92px;
+	font-weight: 500;
+	font-size: 48px;
+	line-height: 56px;
+}
+
+.this_together div {
+	text-indent: 220px;
+}
+
+/*------------------------------------*/
+.introducing__piedpipercoin {
+	background-color: #FFFFFF;
+}
+
+.introducing__title {
+	padding: 48px 0 16px 0;
+}
+
+.introducing__piedpiper1 {
+	display: flex;
+}
+
+.emblem {
+	flex: 0 0 115px;
+	max-height: 115px;
+	margin-right: 48px;
+	display: block;
+}
+
+.introducing__text {
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 38px;
+	color: #000000;
+}
+
+.introducing__text p {
+	flex: 1 1 auto;
+	margin-bottom: 40px;
+}
+
+.introducing__text span {
+	font-style: italic;
+}
+
+.introducing__text-second {
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 38px;
+	color: #000000;
+	padding-bottom: 92px;
+}
+
+.introducing__text-second p {
+	margin-bottom: 32px;
+}
+
+.introducing__text-second p:last-child {
+	margin-bottom: 0;
+}
+
+/*------------------------------------*/
+.footer {
+	background-color: #333333;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer__case {
+	max-width: 1219px;
+}
+
+.footer__text {
+	max-width: 540px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.footer__text p {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 21px;
+	color: #fff;
+	text-indent: 15px;
+	padding: 48px 0 64px 0;
+}
+
+/*------------------------------------*/
+.team__content {
+	background: #EEEEEE;
+}
+
+.team_title {
+	padding-top: 48px;
+}
+
+.team {
+	width: 1100px;
+	margin: 0 auto;
+}
+
+.members1 {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	margin-bottom: 80px;
+	padding-top: 56px;
+}
+
+.members1 img {
+	margin: 0 auto;
+}
+
+.members2 {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	padding-bottom: 122px;
+}
+
+.members2 img {
+	margin: 0 auto;
+}
+
+.member {
+	text-align: center;
+	flex-basis: 33.333%;
+	box-sizing: border-box;
+	justify-content: center;
+}
+
+.member-name {
+	margin: 0;
+	margin-top: 12px;
+	font-weight: 600;
+	font-size: 24px;
+	color: #007765;
+}
+
+.member-role {
+	font-style: italic;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 21px;
+}
